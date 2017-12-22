@@ -1,1 +1,0 @@
-@"D:\Project\GithubClone\scientific_research_mj\venv\Scripts\python.exe" "D:\Project\GithubClone\scientific_research_mj\venv\Scripts\markdown_py" %*
