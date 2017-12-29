@@ -1,4 +1,5 @@
 #Code by Michael John
+#Thuật toán sử dụng Neural 2 lớp (input và output)
 #Thêm thư viện xử lý toán học numpy vào
 import numpy as np
 
