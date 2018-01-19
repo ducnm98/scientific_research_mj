@@ -10,7 +10,7 @@ class NeuralNetwork():
         # We model a single neuron, with 3 input connections and 1 output connection.
         # We assign random weights to a 3 x 1 matrix, with values in the range -1 to 1
         # and mean 0.
-        self.synaptic_weights = 2 * random.random((3, 1)) - 1
+        self.synaptic_weights = 2 * random.random((4, 1)) - 1
 
 
     # The Sigmoid function, which describes an S shaped curve.
@@ -63,6 +63,9 @@ if __name__ == "__main__":
     training_set_inputs = array([[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]])
     training_set_outputs = array([[0, 1, 1, 0]]).T
 
+    training_set_inputs = array([[4.7, 3.2, 1.3, 0.2], [6.1, 2.8, 4.7, 1.2], [5.6, 3.0, 4.1, 1.3], [5.8, 2.7, 5.1, 1.9]])
+    training_set_outputs = array([[0, 1, 1, 0]]).T
+
     # Train the neural network using a training set.
     # Do it 10,000 times and make small adjustments each time.
     neural_network.train(training_set_inputs, training_set_outputs, 10000)
@@ -72,4 +75,4 @@ if __name__ == "__main__":
 
     # Test the neural network with a new situation.
     print ("Considering new situation [1, 0, 0] -> ?: ")
-    print (neural_network.think(array([1, 0, 0])))
+    print (neural_network.think(array([6.5, 3.2, 5.1, 2.0])))
