@@ -45,11 +45,9 @@ class NeuralNetwork():
 
 neural_network = NeuralNetwork()
 
-training_set_inputs = np.array([[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]])
-training_set_outputs = np.array([[0, 1, 1, 0]]).T
+training_set_inputs = np.array([[ 4.7, 3.2, 1.3, 0.2], [ 6.1, 2.8, 4.7, 1.2], [ 5.6, 3.0, 4.1, 1.3], [ 5.8, 2.7, 5.1, 1.9], [ 6.5, 3.2, 5.1, 2.0]])
+training_set_outputs = np.array([[0, 1, 1, 0, 0]]).T
 
-training_set_inputs = np.array([[4.7, 3.2, 1.3, 0.2], [6.1, 2.8, 4.7, 1.2], [5.6, 3.0, 4.1, 1.3], [5.8, 2.7, 5.1, 1.9]])
-training_set_outputs = np.array([[0, 1, 1, 0]]).T
 
 neural_network.trainData(training_set_inputs, training_set_outputs, 10000)
 
@@ -57,5 +55,5 @@ print("New synaptic weights after training: ")
 print(neural_network.weigth)
 
 print("Considering new situation [1, 0, 0] -> ?: ")
-print(neural_network.think(np.array([6.5, 3.2, 5.1, 2.0])))
+print(neural_network.think(np.array([ 5.8, 2.7, 3.9, 1.2])))
 

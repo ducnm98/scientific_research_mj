@@ -8,8 +8,8 @@ class Neural_Network():
     self.inputSize = inputSize
     self.hiddenSize = 3
     #Create random Weights
-    self.weigth_One = np.random.random((self.inputSize, self.hiddenSize))
-    self.weigth_Out = np.random.random((self.hiddenSize, 1))
+    self.weigth_One = 2 * np.random.random((self.inputSize, self.hiddenSize)) - 1
+    self.weigth_Out = 2 * np.random.random((self.hiddenSize, 1)) - 1
 
 
   def __sigmoid(self, s):

@@ -1,15 +1,16 @@
 import numpy as np
 
 # X = (hours sleeping, hours studying), y = score on test
-X = np.array([[4.7, 3.2, 1.3, 0.2], [6.1, 2.8, 4.7, 1.2], [5.6, 3.0, 4.1, 1.3], [5.8, 2.7, 5.1, 1.9]])
-y = np.array([[0, 1, 1, 0]]).T
+X = np.array([[1, 4.7, 3.2, 1.3, 0.2], [1, 6.1, 2.8, 4.7, 1.2], [1, 5.6, 3.0, 4.1, 1.3], [1, 5.8, 2.7, 5.1, 1.9], [1, 6.5, 3.2, 5.1, 2.0]])
+y = np.array([[0, 1, 1, 0, 0]]).T
+
 
 # scale units
 
 class Neural_Network(object):
   def __init__(self):
     #parameters
-    self.inputSize = 4
+    self.inputSize = 5
     self.outputSize = 1
     self.hiddenSize = 3
 
@@ -51,5 +52,5 @@ class Neural_Network(object):
 NN = Neural_Network()
 for i in range(10000): # trains the NN 1,000 times
   NN.train(X, y)
-  print(NN.forward(np.array([6.5, 3.2, 5.1, 2.0])))
+  print(NN.forward(np.array([1, 5.8, 2.7, 3.9, 1.2])))
 
