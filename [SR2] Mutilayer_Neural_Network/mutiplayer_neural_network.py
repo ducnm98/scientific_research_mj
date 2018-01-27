@@ -4,15 +4,18 @@ import numpy as np
 X = np.array([[1, 4.7, 3.2, 1.3, 0.2], [1, 6.1, 2.8, 4.7, 1.2], [1, 5.6, 3.0, 4.1, 1.3], [1, 5.8, 2.7, 5.1, 1.9], [1, 6.5, 3.2, 5.1, 2.0]])
 y = np.array([[0, 1, 1, 0, 0]]).T
 
+X = np.array([[9,5,16,5,16,8,9,8],[2,5,5,5,5,11,2,11],[9,7,18,7,18,15,9,15],[8,9,17,9,17,12,8,12],[8,7,8,0,0,0,6,1],[2,2,8,5,1,6,4,2],[1,5,3,6,7,0,4,6],[2,0,9,1,3,5,9,9]])
+Y = np.array([[1,1,1,1,0,0,0,0]]).T
+
 
 # scale units
 
 class Neural_Network(object):
   def __init__(self):
     #parameters
-    self.inputSize = 5
+    self.inputSize = 8
     self.outputSize = 1
-    self.hiddenSize = 3
+    self.hiddenSize = 5
 
     #weights
     self.W1 = np.random.randn(self.inputSize, self.hiddenSize) # (3x2) weight matrix from input to hidden layer
@@ -52,5 +55,5 @@ class Neural_Network(object):
 NN = Neural_Network()
 for i in range(10000): # trains the NN 1,000 times
   NN.train(X, y)
-  print(NN.forward(np.array([1, 5.8, 2.7, 3.9, 1.2])))
+  print(NN.forward(np.array([4,9,5,9,5,12,4,12])))
 
